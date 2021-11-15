@@ -1,0 +1,76 @@
+%YAML 1.2
+---
+name: color_code
+file_extensions: [txt, notes]
+scope: text
+
+contexts:
+  main:
+    # block quotes
+      - match: '"\*'
+        scope: string.quoted.triple
+        push:
+          - meta_scope: string.quoted.triple
+          - match: '\*"'
+            scope: string.quoted.triple
+            pop: 1
+    # line quotes
+      - match: '"[^"]*"'
+        scope: string.quoted.double
+    # block comments
+      - match: '/\*'
+        scope: comment.block
+        push:
+          - meta_scope: comment.block
+          - match: '\*/'
+            scope: comment.block
+            pop: 1
+      - match: '#\*'
+        scope: comment.block
+        push:
+          - meta_scope: comment.block
+          - match: '\*#'
+            scope: comment.block
+            pop: 1
+    # line comments
+      - match: '\/\/.*'
+        scope: comment.line
+      - match: '#.*'
+        scope: comment.line
+    # block panics
+      - match: '!\*'
+        scope: invalid.illegal
+        push:
+          - meta_scope: invalid.illegal
+          - match: '\*!'
+            scope: invalid.illegal
+            pop: 1
+    # line panics
+      - match: '.*(!!)$'
+        scope: invalid.illegal
+      - match: '!!.*'
+        scope: invalid.illegal
+    # punctuation
+      - match: '[+\-*/^&|=~<>;:!?$%]'
+        scope: keyword.operator
+    # keywords
+      - match: '\.\.\.'
+        scope: keyword.control
+    # booleans
+      - match: '\b(True|False)\b'
+        scope: constant.language
+    # singularities
+      - match: '\b[A-Z]\b'
+        scope: keyword.operator # maybe for this in to all caps or proper nouns?
+    # all caps
+      - match: '\b[A-Z][A-Z0-9_]+\b'
+        scope: keyword.other
+    # proper nouns
+      - match: '\b[A-Z]\w+\b'
+        scope: variable.function # or support.function for italics
+    # links
+      - match: '\b(https?:\/\/)?(\w+\.)?\w+\.(com|org|net|int|edu|gov|mil)\/?[\S]*\b'
+        scope: markup.underline.link
+    # numbers
+      - match: '\d+'
+        scope: constant.numeric.integer
