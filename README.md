@@ -47,4 +47,4 @@ Idk, soory!
 
 # To Do
 
-Add support for embedded code blocks from common programming languages
+Add support for embedded code blocks from common programming languages.
