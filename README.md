@@ -1,7 +1,9 @@
 # color_code
-A quick syntax file for taking color coded notes in sublime text, compatible with your favorite sublime text color scheme.
+A quick syntax file for taking color coded notes in sublime text, compatible with all your favorite color schemes out of the box.
 
-For my personal use.
+For my personal use, mostly.
+
+Written with Sublime Text Build 4121.
 
 # Current highlights:
 
@@ -38,12 +40,13 @@ a basic version of url links,
 and a few other random small things that I forgot!
 
 # Installation
+Download to the folder user defined packages.
 #### windows
-``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\``
+Should look like this: ``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\``
 #### linux
-``/home/%USERNAME%/.config/sublime-text/Packages/User/``
+Should look like this: ``/home/%USERNAME%/.config/sublime-text/Packages/User/``
 #### mac
-``idk, soory!``
+Should look like this: ``idk, soory!``
 
 # To Do
 
