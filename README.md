@@ -42,9 +42,9 @@ and a few other random small things that I forgot!
 # Installation
 Download to the folder user defined packages.
 #### windows
-Should look like this: ``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\``
+Should look like this: ``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\color_code\``
 #### linux
-Should look like this: ``/home/%USERNAME%/.config/sublime-text/Packages/User/``
+Should look like this: ``/home/%USERNAME%/.config/sublime-text/Packages/User/color_code/``
 #### mac
 Should look like this: ``idk, soory!``
 
