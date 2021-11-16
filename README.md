@@ -43,7 +43,7 @@ Put this file in ``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\U
 #### linux
 Put this file in ``[I forgot... ask me later]``
 #### mac
-I don't own a mac, sorry.
+Idk, soory!
 
 # To Do
 
