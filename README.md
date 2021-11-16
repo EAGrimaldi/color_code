@@ -39,11 +39,11 @@ and a few other random small things that I forgot!
 
 # Installation
 #### windows
-Put this file in ``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\``
+``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\``
 #### linux
-Put this file in ``[I forgot... ask me later]``
+``/home/%USERNAME%/.config/sublime-text/Packages/User/``
 #### mac
-Idk, soory!
+``idk, soory!``
 
 # To Do
 
