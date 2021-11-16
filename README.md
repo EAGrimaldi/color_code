@@ -3,7 +3,7 @@ A quick syntax file for taking color coded notes in sublime text, compatible wit
 
 For my personal use.
 
-# Currently highlights:
+# Current highlights:
 
 `" ... "` in-line double quotes,
 
