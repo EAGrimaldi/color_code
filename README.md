@@ -36,9 +36,9 @@ a basic version of url links,
 and a few other random small things that I forgot!
 
 # Installation
-## windows
+#### windows
 Put this file in ``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\``
-## linux
+#### linux
 Put this file in ``[I forgot... ask me later]``
 
 # To Do
