@@ -40,6 +40,8 @@ and a few other random small things that I forgot!
 Put this file in ``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\``
 #### linux
 Put this file in ``[I forgot... ask me later]``
+#### mac
+I don't own a mac, sorry.
 
 # To Do
 
