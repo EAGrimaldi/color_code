@@ -1,7 +1,7 @@
 # color_code
 A quick syntax file for taking color coded notes in sublime text, compatible with your favorite sublime text color scheme.
 
-Currently highlights:
+# Currently highlights:
 
 `" ... "` in-line double quotes,
 
