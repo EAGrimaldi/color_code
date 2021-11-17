@@ -57,7 +57,7 @@ and a few other random small things that I forgot!
 
 # Requirements
 
-Written with Sublime Text Build 4121.
+Written with Sublime Text Build 4121. I believe at least Build 4075 is required.
 
 You probably need to install [Package Control](https://packagecontrol.io/installation). And maybe also [PackageDev](https://github.com/SublimeText/PackageDev)?
 
