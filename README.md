@@ -1,4 +1,5 @@
 # color_code
+
 A quick syntax file for taking color coded notes in sublime text, compatible with all your favorite color schemes out of the box.
 
 For my personal use, mostly.
@@ -7,25 +8,38 @@ Written with Sublime Text Build 4121.
 
 # Current highlights:
 
-`" ... "` in-line double quotes,
+code blocks from common languages (python, java, c++, etc)
+` ```python
+...
+``` `
 
+in-line double quotes
+`" ... "`
+
+block double quotes
 `"* ... 
-... *"` block double quotes,
+... *"`
 
-`// ...` c style end-of-line comments,
+c style end-of-line comments
+`// ...`
 
+c style block comments
 `/* ...
-... */` c style block comments,
+... */`
 
-`#` python style end-of-line comments,
+python style end-of-line comments
+`# ...`
 
+this weird style of block comments that I *really* wish python had
 `#* ...
-... *#` this weird style of block comments that I *really* wish python had,
+... *#`
 
-`!! ...` end-of-line emergencies,
+end-of-line emergencies
+`!! ...`
 
+block emergencies
 `!* ...
-... *!` block emergencies,
+... *!`
 
 ALL CAPS (including numbers and underscores),
 
@@ -40,14 +54,15 @@ a basic version of url links,
 and a few other random small things that I forgot!
 
 # Installation
+
 Download to the folder user defined packages.
 #### windows
-Should look like this: ``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\color_code\``
+clone repo into: ``C:\Users\%USERNAME%\AppData\Roaming\Sublime Text 3\Packages\User\``
 #### linux
-Should look like this: ``/home/%USERNAME%/.config/sublime-text/Packages/User/color_code/``
+clone repo into: ``/home/%USERNAME%/.config/sublime-text/Packages/User/``
 #### mac
-Should look like this: ``idk, soory!``
+clone repo into: ``%i have no idea how macs work%/Packages/User/``
 
 # To Do
 
-Add support for embedded code blocks from common programming languages.
+Add support for more languages to embedded code blocks.
