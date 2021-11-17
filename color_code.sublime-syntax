@@ -6,6 +6,127 @@ scope: text
 
 contexts:
   main:
+    # block code
+      # example
+      - match: ^```(example)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.example
+        embed_scope: meta.embedded.example.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # c
+      - match: ^```(c)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.c
+        embed_scope: meta.embedded.c.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # c++
+      - match: ^```(c\+\+|cpp)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.c++
+        embed_scope: meta.embedded.c++.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # c#
+      - match: ^```(c#|cs)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.cs
+        embed_scope: meta.embedded.cs.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # go
+      - match: ^```(go|golang)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.go
+        embed_scope: meta.embedded.go.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # java
+      - match: ^```(java)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.java
+        embed_scope: meta.embedded.java.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # java script
+      - match: ^```(js|javascript)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.js
+        embed_scope: meta.embedded.js.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # python
+      - match: ^```(py|python)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.python
+        embed_scope: meta.embedded.python.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # matlab
+      - match: ^```(matlab|MATLAB)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.matlab
+        embed_scope: meta.embedded.matlab.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # regular expressions
+      - match: ^```(re|regex|regexp)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.regexp
+        embed_scope: meta.embedded.regexp.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # rust
+      - match: ^```(rust)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.rust
+        embed_scope: meta.embedded.rust.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+      # type script
+      - match: ^```(ts|typescript)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.ts
+        embed_scope: meta.embedded.ts.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
     # block quotes
       - match: '"\*'
         scope: string.quoted.triple
