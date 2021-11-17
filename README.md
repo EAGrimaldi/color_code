@@ -2,9 +2,7 @@
 
 A quick syntax file for taking color coded notes in sublime text, compatible with all your favorite color schemes out of the box.
 
-For my personal use, mostly.
-
-Written with Sublime Text Build 4121.
+Now with syntax highlighting in embedded code blocks for various common languages!
 
 # Current highlights:
 
@@ -18,20 +16,23 @@ in-line double quotes
 
 block double quotes
 `"* ... 
+...
 ... *"`
 
-c style end-of-line comments
+c-style end-of-line comments
 `// ...`
 
-c style block comments
+c-style block comments
 `/* ...
+...
 ... */`
 
-python style end-of-line comments
+python-style end-of-line comments
 `# ...`
 
 this weird style of block comments that I *really* wish python had
 `#* ...
+...
 ... *#`
 
 end-of-line emergencies
@@ -39,6 +40,7 @@ end-of-line emergencies
 
 block emergencies
 `!* ...
+...
 ... *!`
 
 ALL CAPS (including numbers and underscores),
@@ -49,9 +51,15 @@ digits outside of caps and nouns,
 
 math symbols and punctuation,
 
-a basic version of url links,
+a reasonably functional version of url links,
 
 and a few other random small things that I forgot!
+
+# Requirements
+
+Written with Sublime Text Build 4121.
+
+You probably need to install [Package Control](https://packagecontrol.io/installation). And maybe also [PackageDev](https://github.com/SublimeText/PackageDev)?
 
 # Installation
 
@@ -65,4 +73,6 @@ clone repo into: ``%i have no idea how macs work%/Packages/User/``
 
 # To Do
 
-Add support for more languages to embedded code blocks.
+Add support for more languages in embedded code blocks.
+
+Add support for installation through Package Control.

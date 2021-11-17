@@ -6,8 +6,10 @@ scope: text
 
 contexts:
   main:
-    # block code
-      # example
+    - include: code
+    - include: notes
+  code:
+    # example
       - match: ^```(example)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -17,7 +19,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # c
+    # c
       - match: ^```(c)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -27,7 +29,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # c++
+    # c++
       - match: ^```(c\+\+|cpp)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -37,7 +39,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # c#
+    # c#
       - match: ^```(c#|cs)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -47,7 +49,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # go
+    # go
       - match: ^```(go|golang)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -57,7 +59,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # java
+    # java
       - match: ^```(java)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -67,7 +69,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # java script
+    # java script
       - match: ^```(js|javascript)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -77,7 +79,17 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # python
+    # JSON
+      - match: ^```(json|JSON)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.json
+        embed_scope: meta.embedded.json.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+    # python
       - match: ^```(py|python)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -87,7 +99,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # matlab
+    # matlab
       - match: ^```(matlab|MATLAB)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -97,7 +109,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # regular expressions
+    # regular expressions
       - match: ^```(re|regex|regexp)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -107,7 +119,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # rust
+    # rust
       - match: ^```(rust)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -117,7 +129,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-      # type script
+    # type script
       - match: ^```(ts|typescript)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -127,6 +139,27 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
+    # YAML
+      - match: ^```(yaml|YAML)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.yaml
+        embed_scope: meta.embedded.yaml.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+    # XML
+      - match: ^```(xml|XML)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.xml
+        embed_scope: meta.embedded.xml.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+  notes:
     # block quotes
       - match: '"\*'
         scope: string.quoted.triple
