@@ -49,6 +49,16 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
+    # CSS
+      - match: ^```(css|CSS)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.css
+        embed_scope: meta.embedded.css.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
     # go
       - match: ^```(go|golang)$
         captures:
@@ -56,6 +66,16 @@ contexts:
           2: constant.other.markdown
         embed: scope:source.go
         embed_scope: meta.embedded.go.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+    # HTML
+      - match: ^```(html|HTML)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.html
+        embed_scope: meta.embedded.html.markdown
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
@@ -69,7 +89,7 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-    # java script
+    # javascript
       - match: ^```(js|javascript)$
         captures:
           1: punctuation.section.code.begin.markdown
@@ -89,6 +109,16 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
+    # kotlin
+      - match: ^```(kotlin)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.kotlin
+        embed_scope: meta.embedded.kotlin.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
     # python
       - match: ^```(py|python)$
         captures:
@@ -96,16 +126,6 @@ contexts:
           2: constant.other.markdown
         embed: scope:source.python
         embed_scope: meta.embedded.python.markdown
-        escape: '^```$'
-        escape_captures:
-          0: punctuation.section.code.end.markdown
-    # matlab
-      - match: ^```(matlab|MATLAB)$
-        captures:
-          1: punctuation.section.code.begin.markdown
-          2: constant.other.markdown
-        embed: scope:source.matlab
-        embed_scope: meta.embedded.matlab.markdown
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
@@ -129,7 +149,17 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
-    # type script
+    # SQL
+      - match: ^```(sql|SQL)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:source.sql
+        embed_scope: meta.embedded.sql.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
+    # typescript
       - match: ^```(ts|typescript)$
         captures:
           1: punctuation.section.code.begin.markdown
