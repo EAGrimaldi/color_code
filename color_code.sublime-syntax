@@ -9,16 +9,6 @@ contexts:
     - include: code
     - include: notes
   code:
-    # example
-      - match: ^```(example)$
-        captures:
-          1: punctuation.section.code.begin.markdown
-          2: constant.other.markdown
-        embed: scope:source.example
-        embed_scope: meta.embedded.example.markdown
-        escape: '^```$'
-        escape_captures:
-          0: punctuation.section.code.end.markdown
     # c
       - match: ^```(c)$
         captures:
@@ -119,6 +109,16 @@ contexts:
         escape: '^```$'
         escape_captures:
           0: punctuation.section.code.end.markdown
+    # markdown
+      - match: ^```(md|markdown)$
+        captures:
+          1: punctuation.section.code.begin.markdown
+          2: constant.other.markdown
+        embed: scope:text.html.markdown
+        embed_scope: meta.embedded.markdown.markdown
+        escape: '^```$'
+        escape_captures:
+          0: punctuation.section.code.end.markdown
     # python
       - match: ^```(py|python)$
         captures:
@@ -190,6 +190,9 @@ contexts:
         escape_captures:
           0: punctuation.section.code.end.markdown
   notes:
+    # generic line code
+      - match: '`[^`]+`'
+        scope: markup.raw.inline
     # block quotes
       - match: '"\*'
         scope: string.quoted.triple
